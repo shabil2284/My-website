@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>My website</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <style>
+        /* Add custom styles */
+        #click:checked ~ .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Shabil's Official Website</a>
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="main">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/shabil-062141255" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/__shabil_ahmed__?igsh=NXVjNHpwczAwdTZu" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                <a href="https://x.com/_SHABIL_AHMED_" style="--socialAni:3"><i class='bx bxl-twitter'></i></a>
+                <a href="https://github.com/shabil2284" style="--socialAni:5"><i class='bx bxl-github'></i></a>
+                <a href="mailto:shabil.ahmed112@gmail.com" style="--socialAni:6"><i class='bx bxl-gmail'></i></a>
+                <a href="tel:+91 9686491912" style="--socialAni:7"><i class='bx bxs-phone'></i></a>
+            </div>
+            <div class="detail">
+                <h1>Hi, I'm <span>SHABIL</span></h1>
+                <h3>AIML Engineer</h3>
+                <p>I'm an enthusiastic AIML and DevOps engineer. My goal is to leverage my skills to drive success and deliver value through advanced AIML technologies and robust DevOps practices.</p>
+                <div class="btn">
+                    <a href="SHABIL_RESUME (1) copy.pdf" download><button>Download Resume</button></a>
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="shabil copy.png" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const darkbtn = document.getElementById('darkbtn');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkbtn.checked = true;
+        }
+
+        darkbtn.addEventListener('change', () => {
+            if (darkbtn.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
